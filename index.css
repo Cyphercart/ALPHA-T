@@ -1,0 +1,428 @@
+/* Global Styles */
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   scroll-behavior: smooth;
+   text-align: center;
+}
+
+body {
+   font-family: Arial, sans-serif;
+   background-color: #f4f4f4;
+   color: #333;
+   line-height: 1.6;
+   padding: 0 20px;
+   font-size: 16px;
+}
+
+/* Navbar Styles */
+.navbar {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   background-color: white;
+   padding: 15px 30px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   border-radius: 5px;
+   position: sticky;
+   top: 0;
+   z-index: 1000;
+   transition: background-color 0.3s ease;
+}
+
+.navbar:hover {
+   background-color: #f8f8f8;
+}
+
+.navbar .logo {
+   font-size: 1.8rem;
+   font-weight: bold;
+   color: maroon;
+   text-decoration: none;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+}
+
+.navbar .links {
+   display: flex;
+   gap: 25px;
+}
+
+.navbar .links a {
+   font-size: 1rem;
+   color: rgb(255, 255, 255);
+   text-decoration: none;
+   font-weight: 500;
+   transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.navbar .links a:hover {
+   background-color: wheat;
+   color: rgb(0, 0, 0);
+   transform: scale(1.1);
+}
+
+.navbar .buttons {
+   display: flex;
+   gap: 15px;
+}
+
+/* Navbar Responsiveness (Hamburger menu for mobile screens) */
+@media (max-width: 768px) {
+   .navbar {
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+   }
+
+   .navbar .links {
+      flex-direction: column;
+      width: 100%;
+      margin-top: 20px;
+      gap: 10px;
+   }
+
+   .navbar .buttons {
+      width: 100%;
+      justify-content: center;
+      margin-top: 20px;
+   }
+
+   .navbar .links a {
+      font-size: 1.2rem;
+      padding: 10px;
+      text-align: center;
+      width: 100%;
+   }
+}
+
+/* Heading Section */
+.heading {
+   padding: 0px 30px;
+   text-align: center;
+}
+
+.heading h1 {
+   font-size: 5rem;
+   color: maroon;
+   transition: transform 0.3s ease;
+}
+
+.heading h1:hover {
+   transform: scale(1.05);
+}
+
+.heading h5 {
+   color: black;
+   font-family: monospace;
+}
+
+/* Offers Section */
+.offers {
+   text-align: center;
+   padding: 50px 0;
+   background-color: #fff;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   border-radius: 10px;
+   transition: transform 0.3s ease;
+}
+
+.offers h1 {
+   font-size: 2.5rem;
+   font-weight: bold;
+   color: maroon;
+   margin-bottom: 30px;
+}
+
+.offers:hover {
+   transform: translateY(-5px);
+}
+
+.offers {
+   display: flex;
+   justify-content: space-around;
+   flex-wrap: wrap;
+}
+
+.combo {
+   background-color: #fff;
+   border: 2px solid maroon;
+   border-radius: 10px;
+   padding: 20px;
+   margin: 20px;
+   text-align: center;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease, box-shadow 0.3s ease;
+   flex: 1 1 30%;
+}
+
+.combo h2 {
+   font-size: 2rem;
+   font-weight: bold;
+   color: maroon;
+   margin-bottom: 10px;
+}
+
+.combo .price {
+   font-size: 1.5rem;
+   font-weight: bold;
+   color: maroon;
+   margin-bottom: 15px;
+}
+
+.combo p {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 20px;
+}
+
+.combo:hover {
+   transform: scale(1.05);
+   box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+@media (max-width: 768px) {
+   .combo {
+      flex: 1 1 100%;
+      margin: 10px 0;
+   }
+}
+
+/* About Section */
+.about {
+   background-color: #f9f9f9;
+   padding: 40px;
+   margin: 20px;
+   border-radius: 10px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   text-align: center;
+   font-family: 'Arial', sans-serif;
+}
+
+.about h2 {
+   font-size: 2.5rem;
+   color: maroon;
+   margin-bottom: 20px;
+   font-weight: bold;
+}
+
+.about p {
+   font-size: 1rem;
+   color: #555;
+   margin-bottom: 20px;
+}
+
+/* Button Styles */
+button {
+   padding: 10px 20px;
+   background-color: maroon;
+   color: white;
+   border: 2px solid maroon;
+   border-radius: 5px;
+   font-size: 1rem;
+   cursor: pointer;
+   transition: all 0.3s ease;
+   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+   background-color: white;
+   color: maroon;
+   border-color: maroon;
+   text-decoration: underline;
+   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Form Styling */
+form {
+   max-width: 500px;
+   margin: 0 auto;
+   background-color: white;
+   text-align: center;
+   border-radius: 8px;
+   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+   width: 100%;
+}
+
+form h2 {
+   text-align: center;
+   margin-bottom: 20px;
+   font-size: 24px;
+   color: #333;
+}
+
+label {
+   display: block;
+   font-size: 14px;
+   margin-bottom: 8px;
+   color: #555;
+}
+
+input[type="email"],
+input[type="number"],
+select,
+textarea {
+   width: 80%;
+   padding: 10px;
+   margin-bottom: 15px;
+   border: 1px solid #ddd;
+   border-radius: 4px;
+   font-size: 16px;
+}
+
+textarea {
+   height: 100px;
+   resize: vertical;
+}
+
+button {
+   background-color: maroon;
+   color: white;
+   border: none;
+   padding: 10px 20px;
+   border-radius: 4px;
+   font-size: 16px;
+   cursor: pointer;
+   width: 100%;
+   transition: background-color 0.3s ease;
+}
+
+button:hover {
+   color: black;
+   background-color: #ffffff;
+}
+
+p {
+   font-size: 12px;
+   color: #777;
+   text-align: center;
+   margin-top: 10px;
+}
+
+a {
+   color: maroon;
+   text-decoration: none;
+   font-size: 14px;
+}
+
+a:hover {
+   text-decoration: underline;
+}
+
+/* Ending Section Styles */
+.ending {
+   text-align: center;
+   padding: 60px 20px;
+   background-color: #f4f4f4;
+   border-top: 3px solid maroon;
+}
+
+.ending h1 {
+   font-size: 3rem;
+   font-weight: bold;
+   color: maroon;
+   margin-bottom: 20px;
+   font-family: 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+   text-transform: uppercase;
+}
+
+.ending .div {
+   background-color: white;
+   padding: 40px;
+   border-radius: 10px;
+   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+   max-width: 600px;
+   margin: 0 auto;
+}
+
+.ending .heading {
+   font-size: 2.5rem;
+   color: maroon;
+   font-weight: bold;
+   margin-bottom: 10px;
+}
+
+.ending p {
+   font-size: 1.2rem;
+   color: #555;
+   font-style: italic;
+   margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+   .ending h1 {
+      font-size: 2.5rem;
+   }
+
+   .ending .div {
+      padding: 30px;
+   }
+
+   .ending .heading {
+      font-size: 2rem;
+   }
+
+   .ending p {
+      font-size: 1rem;
+   }
+}
+
+/* Specialty Section Styling */
+.specialty {
+   background-color: #f9f9f9;
+   padding: 60px 20px;
+   text-align: center;
+   margin-top: 40px;
+}
+
+.specialty h2 {
+   font-size: 2.5rem;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 40px;
+}
+
+.specialty-item {
+   background-color: white;
+   padding: 20px;
+   margin: 20px 0;
+   border-radius: 8px;
+   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+   transition: transform 0.3s ease;
+}
+
+.specialty-item h3 {
+   font-size: 1.8rem;
+   font-weight: bold;
+   color: #333;
+   margin-bottom: 10px;
+}
+
+.specialty-item p {
+   font-size: 1.1rem;
+   color: #555;
+   line-height: 1.6;
+}
+
+.specialty-item:hover {
+   transform: translateY(-5px);
+   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 468px) {
+   .specialty h2 {
+      font-size: 2rem;
+   }
+
+   .specialty-item {
+      padding: 15px;
+   }
+
+   .specialty-item h3 {
+      font-size: 1.6rem;
+   }
+
+   .specialty-item p {
+      font-size: 1rem;
+   }
+}
